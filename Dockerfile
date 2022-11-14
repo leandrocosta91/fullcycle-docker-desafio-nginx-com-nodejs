@@ -2,8 +2,10 @@ FROM node:18-alpine
 
 WORKDIR /var/www
 
-COPY . .
+COPY package.json .
 
-RUN npm install
+RUN npm install -y
+
+COPY . .
 
 CMD [ "npm", "start" ]

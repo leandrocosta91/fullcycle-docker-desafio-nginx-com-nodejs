@@ -1,9 +1,9 @@
 const sequelize = require('../db/config');
-const People = require('../Models/People');
+const People = require('../models/People');
 
 module.exports = {
     async index(req, res) {
-
+        console.log('Esotu no controller.');
         await sequelize.sync().then(() => {         
             People.create({
                 nome: "Leandro de Souza Costa",

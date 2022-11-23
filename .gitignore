@@ -1,2 +1,4 @@
 node_modules/
 commands_install_dependencies.txt
+.docker/nginx/log/access.log
+.docker/nginx/log/error.log

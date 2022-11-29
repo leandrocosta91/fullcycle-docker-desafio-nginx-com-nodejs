@@ -10,14 +10,21 @@
     "type": "git",
     "url": "git@github-pessoal:leandrocosta91/fullcycle-docker-desafio-nginx-com-nodejs.git"
   },
-  "keywords": ["ejs", "express", "mysql2", "sequelize"],
+  "keywords": [
+    "ejs",
+    "express",
+    "mysql2",
+    "sequelize"
+  ],
   "author": "Leandro de Souza Costa",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.8",
     "express": "^4.18.2",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.25.7"
+    "npm": "^9.1.2",
+    "sequelize": "^6.25.7",
+    "start": "^5.1.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"

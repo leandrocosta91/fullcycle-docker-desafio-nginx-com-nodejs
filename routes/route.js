@@ -3,8 +3,6 @@ const PeopleController = require('../controllers/PeopleController');
 
 const route = express.Router();
 
-route.get('/', (req, res) => {
-    res.send("About this wiki");
-  });
+route.get('/', PeopleController.index);
 
 module.exports = route;

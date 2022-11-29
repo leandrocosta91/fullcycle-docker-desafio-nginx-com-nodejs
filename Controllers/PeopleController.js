@@ -3,29 +3,28 @@ const People = require('../models/People');
 
 module.exports = {
     async index(req, res) {
-        console.log('Esotu no controller.');
         await sequelize.sync().then(() => {         
             People.create({
                 nome: "Leandro de Souza Costa",
                 email: "leandro.costa91@outlook.com"
-            }).then(res => {
-                console.log(res)
+            }).then(response => {
+                console.log(response);
             }).catch((error) => {
-                console.error('Falha ao criar novo registro : ', error);
+                console.error('Falha ao criar novo registro: ', error);
             });
          
         }).catch((error) => {
-            console.error('Inabilitado para criar tabela : ', error);
+            console.error('Inabilitado para criar tabela: ', error);
         });
 
         await sequelize.sync().then(() => {
-            People.findAll().then(res => {
-                res.render('index', {res: res});
+            People.findAll().then(peoples => {
+                res.render('index', {peoples: peoples});
             }).catch((error) => {
-                console.error('Falha ao recuperar dados : ', error);
+                console.error('Falha ao recuperar dados: ', error);
             });
         }).catch((error) => {
-            console.error('Inabilitado para criar tabela : ', error);
+            console.error('Inabilitado para criar tabela: ', error);
         });
     }
 }

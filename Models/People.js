@@ -16,7 +16,7 @@ const People = sequelize.define('peoples', {
 sequelize.sync().then(() => {
   console.log('Tabela people foi criada com sucesso!');
 }).catch((error) => {
-  console.error('Inabilitado para criar tabela : ', error);
+  console.error('Inabilitado para criar tabela: ', error);
 });
 
 module.exports = People;

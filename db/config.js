@@ -1,6 +1,14 @@
 const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize('mysql://fullcycle:secret@mysql:3306/fullcycle');
+const sequelize = new Sequelize(
+    'fullcycle',
+    'root',
+    'secret',
+    {
+        host: 'mysql',
+        dialect: 'mysql'
+    }
+);
 
 sequelize.authenticate()
 .then(

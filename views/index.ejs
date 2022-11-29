@@ -1,12 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <title>Full Cycle</title>
 </head>
 <body>
-    <h1>Full Cycle Rocks!</h1>
+    <div class="container">
+        <header>
+            <h1>Full Cycle Rocks!</h1>
+        </header>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Ind.</th>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% let i = 0; %>
+                <% peoples.forEach(people => { %> 
+                    <tr>
+                        <td><%= (i+1) %></td>
+                        <td><%= people.nome %></td>
+                        <td><%= people.email %></td>
+                    </tr>
+                <% i++ }); %>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

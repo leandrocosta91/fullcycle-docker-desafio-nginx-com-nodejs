@@ -2,8 +2,12 @@ version: '3'
 
 services:
   nodejs:
-    build: .
+    build: 
+      context: .
+      dockerfile: Dockerfile
     container_name: nodejs
+    command: >
+      sh -c "npm install && npm start"
     ports:
       - "3000:3000"
     volumes:
